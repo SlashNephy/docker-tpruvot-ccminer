@@ -1,4 +1,4 @@
-FROM nvidia/cuda:11.6.2-devel-ubuntu20.04 AS build
+FROM nvidia/cuda:11.7.0-devel-ubuntu20.04 AS build
 
 RUN apt-get -y update \
     && apt-get -y install \
@@ -13,7 +13,7 @@ RUN apt-get -y update \
     && cd ccminer \
     && ./build.sh
 
-FROM nvidia/cuda:11.6.2-base-ubuntu20.04
+FROM nvidia/cuda:11.7.0-base-ubuntu20.04
 ENV NVIDIA_VISIBLE_DEVICES all
 ENV NVIDIA_DRIVER_CAPABILITIES video,compute,utility
 ENV LD_LIBRARY_PATH $LD_LIBRARY_PATH:/usr/local/cuda-11.2/compat

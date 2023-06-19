@@ -1,4 +1,4 @@
-FROM nvidia/cuda:11.8.0-devel-ubuntu20.04@sha256:916629e498adf6d0c95fc44518d1d2f73759cc6860a6d7087a2fb5e3c2de876a AS build
+FROM nvidia/cuda:11.8.0-devel-ubuntu20.04@sha256:91c743329ee61195221ff4ab84946b208a61092c4707be8ae33bded083c32d37 AS build
 
 RUN apt-get -y update \
     && apt-get -y install \
